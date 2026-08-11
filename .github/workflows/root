@@ -1,36 +1,526 @@
-# This is a basic workflow to help you get started with Actions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Cranmer | Elite Sports Betting Advisory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            backface-visibility: hidden;
+        }
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
 
-name: CI
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-black text-xl shadow-lg shadow-blue-500/30">
+                    KC
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg tracking-tight block">KEVIN CRANMER</span>
+                    <span class="text-xs text-blue-400 font-semibold tracking-widest uppercase">Pro Betting Advisor</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-blue-400 transition">About Kevin</a>
+                <a href="#leagues" class="hover:text-blue-400 transition">Leagues</a>
+                <a href="#pricing" class="hover:text-blue-400 transition">Pricing & Tiers</a>
+                <a href="#cardSection" class="hover:text-amber-400 transition text-amber-300 font-semibold flex items-center"><i class="fa-solid fa-clone mr-1.5"></i> Pick a Card</a>
+                <a href="#message" class="text-white bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-full shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">Direct Message</a>
+            </nav>
+        </div>
+    </header>
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-16 pb-24 lg:pt-28 lg:pb-32">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/50 via-slate-950 to-slate-950 -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-bolt text-amber-400"></i>
+                        <span>FanDuel Partner & Pro Handicapper</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                        Ready to Share My Secrets to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400">Winning Money</span> Daily.
+                    </h1>
+                    <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                        Whether you are placing your very first wager or looking to scale up fast on <span class="text-slate-200 font-semibold">FanDuel Sportsbook & Fantasy</span>, Kevin Cranmer delivers proven strategies, sharp insights, and direct personal guidance for NFL, NBA, and WNBA.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#message" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-base shadow-xl shadow-blue-600/20 transition transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Message Kevin Directly
+                        </a>
+                        <a href="#cardSection" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/20 text-amber-300 font-semibold text-base transition">
+                            <i class="fa-solid fa-clone mr-2"></i> Pick a Card for Discount
+                        </a>
+                    </div>
+                    <!-- Trust Metrics -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-900">
+                        <div>
+                            <div class="text-2xl font-bold text-white">NFL • NBA • WNBA</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider">Primary Leagues</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-emerald-400">FanDuel</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider">Optimized Books</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-blue-400">1-on-1</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider">Direct Access</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md bg-gradient-to-b from-slate-900 to-slate-900/40 p-8 rounded-3xl border border-slate-800 shadow-2xl">
+                        <div class="absolute -top-4 -right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            Verified Expert
+                        </div>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl font-bold">
+                                KC
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">Kevin Cranmer</h3>
+                                <p class="text-xs text-slate-400">Professional Sports Investor</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm italic mb-6">
+                            "Most people lose money because they bet with emotion, not math. My goal is to teach you exact bankroll discipline, value picking, and insider FanDuel strategies."
+                        </p>
+                        <div class="space-y-3 bg-slate-950/60 p-4 rounded-xl border border-slate-800/80">
+                            <div class="flex items-center text-xs text-slate-300">
+                                <i class="fa-solid fa-check text-emerald-400 mr-2"></i> Custom bankroll management tips
+                            </div>
+                            <div class="flex items-center text-xs text-slate-300">
+                                <i class="fa-solid fa-check text-emerald-400 mr-2"></i> FanDuel Sportsbook & DFS Lineups
+                            </div>
+                            <div class="flex items-center text-xs text-slate-300">
+                                <i class="fa-solid fa-check text-emerald-400 mr-2"></i> Direct answers to all your betting questions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+    <!-- Leagues Covered -->
+    <section id="leagues" class="py-20 bg-slate-900/40 border-y border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Dominating the Major Leagues</h2>
+                <p class="mt-4 text-slate-400">Deep statistical analysis, sharp line tracking, and optimal DFS builds for football and basketball seasons.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- NFL -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 hover:border-blue-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-football"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">NFL Betting & Fantasy</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Master spreads, totals, player props, and FanDuel Sunday Million DFS contests with expert injury tracking and game script modeling.
+                    </p>
+                    <span class="inline-flex items-center text-xs font-semibold text-blue-400">
+                        Ask about NFL strategies &rarr;
+                    </span>
+                </div>
+                <!-- NBA -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 hover:border-indigo-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-basketball"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">NBA Season Action</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Navigate load management, back-to-backs, and live in-game betting opportunities on FanDuel Sportsbook for maximum daily profit.
+                    </p>
+                    <span class="inline-flex items-center text-xs font-semibold text-indigo-400">
+                        Ask about NBA strategies &rarr;
+                    </span>
+                </div>
+                <!-- WNBA -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">WNBA High-Value Edges</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        The WNBA provides some of the highest value betting markets in sports due to softer morning lines. Learn how Kevin exploits them.
+                    </p>
+                    <span class="inline-flex items-center text-xs font-semibold text-emerald-400">
+                        Ask about WNBA strategies &rarr;
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    <!-- Pricing Tiers & Packages -->
+    <section id="pricing" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-blue-400 text-xs font-bold uppercase tracking-widest block mb-2">Transparent Membership Options</span>
+                <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Choose Your Level of Access</h2>
+                <p class="mt-4 text-slate-400">Flexible weekly access or best-value monthly plans. <span class="text-amber-400 font-semibold">Special offer: Pick a mystery discount card below to unlock savings on any monthly subscription for the rest of the year!</span></p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Beginner Package -->
+                <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">Starter</div>
+                        <h3 class="text-2xl font-bold mb-2">Beginners</h3>
+                        <p class="text-slate-400 text-sm mb-6">Never placed a bet or confused by odds? Kevin will walk you step-by-step through FanDuel basics.</p>
+                        
+                        <div class="space-y-4 mb-8 bg-slate-950/50 p-5 rounded-2xl border border-slate-800/80">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Weekly Pass</span>
+                                <span class="text-3xl font-extrabold text-white">$15</span><span class="text-xs text-slate-400"> / week</span>
+                            </div>
+                            <div class="pt-3 border-t border-slate-800/80">
+                                <span class="text-xs text-blue-400 uppercase tracking-wider font-bold block">Monthly Pass (Eligible for Card Discount)</span>
+                                <span class="text-3xl font-extrabold text-blue-400">$45</span><span class="text-xs text-slate-400"> / month</span>
+                            </div>
+                        </div>
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-blue-400 mr-2"></i> Understanding American Odds & Spreads</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-blue-400 mr-2"></i> Setting up FanDuel Sportsbook safely</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-blue-400 mr-2"></i> Safe bankroll allocation rules</li>
+                        </ul>
+                    </div>
+                    <a href="#message" onclick="selectTier('Beginner')" class="block w-full py-3 text-center rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition">Select Beginner Plan</a>
+                </div>
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+                <!-- Intermediate Package -->
+                <div class="bg-gradient-to-b from-blue-950/40 to-slate-900/60 border border-blue-500/30 rounded-3xl p-8 flex flex-col justify-between relative shadow-xl shadow-blue-950/50">
+                    <div class="absolute -top-3 right-6 bg-blue-600 text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</div>
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-md bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-4">Growth</div>
+                        <h3 class="text-2xl font-bold mb-2">Intermediate</h3>
+                        <p class="text-slate-400 text-sm mb-6">You know the ropes, but you want to stop breaking even and start turning consistent monthly profits.</p>
+                        
+                        <div class="space-y-4 mb-8 bg-slate-950/50 p-5 rounded-2xl border border-blue-900/40">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Weekly Pass</span>
+                                <span class="text-3xl font-extrabold text-white">$20</span><span class="text-xs text-slate-400"> / week</span>
+                            </div>
+                            <div class="pt-3 border-t border-slate-800/80">
+                                <span class="text-xs text-indigo-400 uppercase tracking-wider font-bold block">Monthly Pass (Eligible for Card Discount)</span>
+                                <span class="text-3xl font-extrabold text-indigo-400">$60</span><span class="text-xs text-slate-400"> / month</span>
+                            </div>
+                        </div>
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Line shopping & finding value edges</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> FanDuel same-game parlays strategy</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-indigo-400 mr-2"></i> Avoiding common rookie mistakes</li>
+                        </ul>
+                    </div>
+                    <a href="#message" onclick="selectTier('Intermediate')" class="block w-full py-3 text-center rounded-xl bg-blue-600 hover:bg-blue-500 font-semibold text-sm transition shadow-lg shadow-blue-600/20">Select Intermediate Plan</a>
+                </div>
+
+                <!-- Pro / Fast Money Package -->
+                <div class="bg-slate-900/40 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">High Pace</div>
+                        <h3 class="text-2xl font-bold mb-2">Pro Package (Fast Money)</h3>
+                        <p class="text-slate-400 text-sm mb-6">Looking for rapid bankroll growth through aggressive player prop slips, live betting, and FanDuel DFS tournaments.</p>
+                        
+                        <div class="space-y-4 mb-8 bg-slate-950/50 p-5 rounded-2xl border border-slate-800/80">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider block">Weekly Pass</span>
+                                <span class="text-3xl font-extrabold text-white">$25</span><span class="text-xs text-slate-400"> / week</span>
+                            </div>
+                            <div class="pt-3 border-t border-slate-800/80">
+                                <span class="text-xs text-emerald-400 uppercase tracking-wider font-bold block">Monthly Pass (Eligible for Card Discount)</span>
+                                <span class="text-3xl font-extrabold text-emerald-400">$75</span><span class="text-xs text-slate-400"> / month</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> High-probability daily prop targets</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> FanDuel Fantasy fast-cash entries</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Direct priority access to Kevin</li>
+                        </ul>
+                    </div>
+                    <a href="#message" onclick="selectTier('Pro (Fast Money)')" class="block w-full py-3 text-center rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition">Select Pro Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Pick a Card Section -->
+    <section id="cardSection" class="py-24 bg-gradient-to-b from-slate-900/40 via-slate-900/80 to-slate-900/40 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-amber-400 text-xs font-bold uppercase tracking-widest block mb-2">New Customer Special</span>
+            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">Pick a Card for Your Mystery Monthly Discount!</h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-12">
+                For the rest of the year, choose 1 of 5 mystery cards below to reveal your exclusive discount on any monthly package with Kevin Cranmer.
+            </p>
+
+            <!-- Cards Container -->
+            <div id="cardsGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 mb-8">
+                <!-- Card 1 -->
+                <div class="card h-64 cursor-pointer perspective" onclick="pickCard(this, 0)">
+                    <div class="card-inner relative w-full h-full rounded-2xl shadow-xl">
+                        <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-amber-500/40 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-amber-400 transition">
+                            <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-3 shadow">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <span class="text-xs font-bold text-amber-300 tracking-wider">KC CARD #1</span>
+                            <span class="text-[10px] text-slate-500 mt-1">Tap to Flip</span>
+                        </div>
+                        <div class="card-back absolute inset-0 bg-gradient-to-br from-amber-600 to-amber-800 border-2 border-amber-300 rounded-2xl flex flex-col items-center justify-center p-4 text-slate-950 font-bold">
+                            <span class="text-xs uppercase tracking-widest opacity-80 mb-1">You Won</span>
+                            <span id="prize-0" class="text-2xl font-black">25% OFF</span>
+                            <span class="text-[10px] mt-2 bg-slate-950 text-amber-300 px-2 py-1 rounded">Monthly Pass</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card h-64 cursor-pointer perspective" onclick="pickCard(this, 1)">
+                    <div class="card-inner relative w-full h-full rounded-2xl shadow-xl">
+                        <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-amber-500/40 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-amber-400 transition">
+                            <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-3 shadow">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <span class="text-xs font-bold text-amber-300 tracking-wider">KC CARD #2</span>
+                            <span class="text-[10px] text-slate-500 mt-1">Tap to Flip</span>
+                        </div>
+                        <div class="card-back absolute inset-0 bg-gradient-to-br from-amber-600 to-amber-800 border-2 border-amber-300 rounded-2xl flex flex-col items-center justify-center p-4 text-slate-950 font-bold">
+                            <span class="text-xs uppercase tracking-widest opacity-80 mb-1">You Won</span>
+                            <span id="prize-1" class="text-2xl font-black">35% OFF</span>
+                            <span class="text-[10px] mt-2 bg-slate-950 text-amber-300 px-2 py-1 rounded">Monthly Pass</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card h-64 cursor-pointer perspective" onclick="pickCard(this, 2)">
+                    <div class="card-inner relative w-full h-full rounded-2xl shadow-xl">
+                        <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-amber-500/40 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-amber-400 transition">
+                            <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-3 shadow">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <span class="text-xs font-bold text-amber-300 tracking-wider">KC CARD #3</span>
+                            <span class="text-[10px] text-slate-500 mt-1">Tap to Flip</span>
+                        </div>
+                        <div class="card-back absolute inset-0 bg-gradient-to-br from-amber-600 to-amber-800 border-2 border-amber-300 rounded-2xl flex flex-col items-center justify-center p-4 text-slate-950 font-bold">
+                            <span class="text-xs uppercase tracking-widest opacity-80 mb-1">You Won</span>
+                            <span id="prize-2" class="text-2xl font-black">50% OFF</span>
+                            <span class="text-[10px] mt-2 bg-slate-950 text-amber-300 px-2 py-1 rounded">Monthly Pass</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card h-64 cursor-pointer perspective" onclick="pickCard(this, 3)">
+                    <div class="card-inner relative w-full h-full rounded-2xl shadow-xl">
+                        <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-amber-500/40 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-amber-400 transition">
+                            <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-3 shadow">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <span class="text-xs font-bold text-amber-300 tracking-wider">KC CARD #4</span>
+                            <span class="text-[10px] text-slate-500 mt-1">Tap to Flip</span>
+                        </div>
+                        <div class="card-back absolute inset-0 bg-gradient-to-br from-amber-600 to-amber-800 border-2 border-amber-300 rounded-2xl flex flex-col items-center justify-center p-4 text-slate-950 font-bold">
+                            <span class="text-xs uppercase tracking-widest opacity-80 mb-1">You Won</span>
+                            <span id="prize-3" class="text-2xl font-black">20% OFF</span>
+                            <span class="text-[10px] mt-2 bg-slate-950 text-amber-300 px-2 py-1 rounded">Monthly Pass</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card h-64 cursor-pointer perspective col-span-2 sm:col-span-1" onclick="pickCard(this, 4)">
+                    <div class="card-inner relative w-full h-full rounded-2xl shadow-xl">
+                        <div class="card-front absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 border-2 border-amber-500/40 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-amber-400 transition">
+                            <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-3 shadow">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <span class="text-xs font-bold text-amber-300 tracking-wider">KC CARD #5</span>
+                            <span class="text-[10px] text-slate-500 mt-1">Tap to Flip</span>
+                        </div>
+                        <div class="card-back absolute inset-0 bg-gradient-to-br from-amber-600 to-amber-800 border-2 border-amber-300 rounded-2xl flex flex-col items-center justify-center p-4 text-slate-950 font-bold">
+                            <span class="text-xs uppercase tracking-widest opacity-80 mb-1">You Won</span>
+                            <span id="prize-4" class="text-2xl font-black">40% OFF</span>
+                            <span class="text-[10px] mt-2 bg-slate-950 text-amber-300 px-2 py-1 rounded">Monthly Pass</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cardResultContainer" class="hidden mb-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-sm font-semibold animate-pulse max-w-lg mx-auto">
+                🎉 <span id="cardResultText">You unlocked a mystery discount!</span>
+            </div>
+
+            <button id="claimDiscountBtn" onclick="scrollToMessageWithDiscount()" class="hidden py-4 px-8 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold text-base shadow-xl shadow-amber-500/20 transition transform hover:-translate-y-0.5">
+                <i class="fa-solid fa-paper-plane mr-2"></i> Claim Discount in Message Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Message Section (Interactive Form) -->
+    <section id="message" class="py-24 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-blue-400 text-xs font-bold uppercase tracking-widest block mb-2">Direct Communication</span>
+                <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Send a Direct Message to Kevin Cranmer</h2>
+                <p class="mt-3 text-slate-400">Ask your specific questions about NFL, NBA, WNBA, bankroll strategies, pricing, or FanDuel setups. Kevin reviews every message.</p>
+            </div>
+
+            <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
+                <!-- Response notification modal box -->
+                <div id="responseBox" class="hidden mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm flex items-center space-x-3">
+                    <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                    <span id="responseText">Message sent successfully! Kevin Cranmer will review your question shortly.</span>
+                </div>
+
+                <form id="dmForm" onsubmit="handleMessageSubmit(event)" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                            <input type="text" id="userName" required placeholder="e.g., Alex Smith" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
+                            <input type="email" id="userEmail" required placeholder="alex@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Selected Package</label>
+                            <select id="userLevel" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition">
+                                <option value="Beginner ($15/wk or $45/mo)">Beginner ($15/wk or $45/mo)</option>
+                                <option value="Intermediate ($20/wk or $60/mo)">Intermediate ($20/wk or $60/mo)</option>
+                                <option value="Pro / Fast Money ($25/wk or $75/mo)">Pro / Fast Money ($25/wk or $75/mo)</option>
+                                <option value="General Question">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Primary League Focus</label>
+                            <select id="userLeague" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-blue-500 transition">
+                                <option value="NFL">NFL (Football)</option>
+                                <option value="NBA">NBA (Basketball)</option>
+                                <option value="WNBA">WNBA (Basketball)</option>
+                                <option value="Multiple">Multiple / General FanDuel DFS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Your Message or Question for Kevin</label>
+                        <textarea id="userQuery" required rows="4" placeholder="Mention if you picked a card discount or ask Kevin about upcoming games, FanDuel sportsbook boosts, or fantasy lineups..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-blue-500 transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-base shadow-xl shadow-blue-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Send Message Directly to Kevin Cranmer</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-950 border-t border-slate-900 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <p class="font-semibold text-slate-400">Kevin Cranmer Sports Betting & Consulting</p>
+            <p class="max-w-xl mx-auto">Disclaimer: Must be 21+ and located in a state where legal online sports wagering / daily fantasy sports is available (via FanDuel). Please gamble responsibly. If you or someone you know has a gambling problem, call 1-800-GAMBLER.</p>
+            <p>&copy; 2026 Kevin Cranmer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let hasChosenCard = false;
+        let wonDiscount = "";
+
+        function pickCard(cardElement, index) {
+            if (hasChosenCard) return;
+            hasChosenCard = true;
+
+            // Randomize prizes among the 5 cards if desired, or assign predefined
+            const possibleDiscounts = ["20% OFF", "25% OFF", "35% OFF", "40% OFF", "50% OFF"];
+            wonDiscount = possibleDiscounts[Math.floor(Math.random() * possibleDiscounts.length)];
+            
+            // Set the clicked card's prize
+            document.getElementById(`prize-${index}`).innerText = wonDiscount;
+
+            // Flip all cards to reveal
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((c, i) => {
+                c.classList.add('flipped');
+                if (i !== index) {
+                    // Give other cards a random discount too for fun
+                    document.getElementById(`prize-${i}`).innerText = possibleDiscounts[(index + i) % possibleDiscounts.length];
+                }
+                c.style.pointerEvents = 'none'; // disable further clicks
+            });
+
+            // Show success result box
+            const resultContainer = document.getElementById('cardResultContainer');
+            const resultText = document.getElementById('cardResultText');
+            resultText.innerHTML = `🎉 Congratulations! You picked Card #${index + 1} and won <strong>${wonDiscount}</strong> on any monthly package for the rest of 2026!`;
+            resultContainer.classList.remove('hidden');
+
+            document.getElementById('claimDiscountBtn').classList.remove('hidden');
+        }
+
+        function scrollToMessageWithDiscount() {
+            document.getElementById('userQuery').value = `Hi Kevin! I picked a card on your site and won ${wonDiscount} for a monthly package for the rest of the year. Let's get started!`;
+            document.getElementById('message').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function selectTier(tierName) {
+            const selectEl = document.getElementById('userLevel');
+            for(let i=0; i<selectEl.options.length; i++) {
+                if(selectEl.options[i].text.includes(tierName)) {
+                    selectEl.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        function handleMessageSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+            const level = document.getElementById('userLevel').value;
+            const league = document.getElementById('userLeague').value;
+            const query = document.getElementById('userQuery').value;
+
+            const responseBox = document.getElementById('responseBox');
+            const responseText = document.getElementById('responseText');
+            
+            responseText.innerHTML = `Thanks <strong>${name}</strong>! Your inquiry for <strong>${level}</strong> (${league}) has been transmitted straight to Kevin Cranmer. Check your inbox at <strong>${email}</strong> for his personal reply!`;
+            responseBox.classList.remove('hidden');
+
+            document.getElementById('dmForm').reset();
+            responseBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
+
